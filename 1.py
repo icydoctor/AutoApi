@@ -43,7 +43,7 @@ def main():
     'Content-Type':'application/json'
     }
     try:
-        if req.get(r'https://graph.microsoft.com/v1.0/me/drive/root',headers=headers).status_code == 200:
+        if req.get(r'https://graph.microsoft.com/v1.0/me/mailFolders/Inbox/messages/delta',headers=headers).status_code == 200:
             num1+=1
             print("1调用成功"+str(num1)+'次')
         if req.get(r'https://graph.microsoft.com/v1.0/me/drive',headers=headers).status_code == 200:
@@ -61,21 +61,106 @@ def main():
         if req.get(r'https://graph.microsoft.com/v1.0/me/mailFolders/inbox/messageRules',headers=headers).status_code == 200:
             num1+=1
             print('6调用成功'+str(num1)+'次')    
-        if req.get(r'https://graph.microsoft.com/v1.0/me/mailFolders/Inbox/messages/delta',headers=headers).status_code == 200:
+        if req.get(r'https://graph.microsoft.com/v1.0/applications?$count=true',headers=headers).status_code == 200:
             num1+=1
             print('7调用成功'+str(num1)+'次')
         if req.get(r'https://graph.microsoft.com/v1.0/me/drive/root/children',headers=headers).status_code == 200:
             num1+=1
             print('8调用成功'+str(num1)+'次')
-        if req.get(r'https://api.powerbi.com/v1.0/myorg/apps',headers=headers).status_code == 200:
-            num1+=1
-            print('8调用成功'+str(num1)+'次') 
-        if req.get(r'https://graph.microsoft.com/v1.0/me/mailFolders',headers=headers).status_code == 200:
-            num1+=1
-            print('9调用成功'+str(num1)+'次')
-        if req.get(r'https://graph.microsoft.com/v1.0/me/outlook/masterCategories',headers=headers).status_code == 200:
+  
+        if req.get(r'https://graph.microsoft.com/beta/me/mailFolders/inbox/messagerules',headers=headers).status_code == 200:
             num1+=1
             print('10调用成功'+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/v1.0/me/outlook/masterCategories',headers=headers).status_code == 200:
+            num1+=1
+            print('11调用成功'+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/v1.0/me/mailFolders/Inbox/messages/delta',headers=headers).status_code == 200:
+            num1+=1
+            print("12调用成功"+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/v1.0/me/drive',headers=headers).status_code == 200:
+            num1+=1
+            print("13调用成功"+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/v1.0/users ',headers=headers).status_code == 200:
+            num1+=1
+            print('14调用成功'+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/v1.0/me/messages',headers=headers).status_code == 200:
+            num1+=1
+            print('15调用成功'+str(num1)+'次')    
+        if req.get(r'https://graph.microsoft.com/v1.0/me/mailFolders/inbox/messageRules',headers=headers).status_code == 200:
+            num1+=1
+            print('16调用成功'+str(num1)+'次')    
+        if req.get(r'https://graph.microsoft.com/v1.0/applications?$count=true',headers=headers).status_code == 200:
+            num1+=1
+            print('17调用成功'+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/v1.0/me/drive/root/children',headers=headers).status_code == 200:
+            num1+=1
+            print('18调用成功'+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/beta/me/mailFolders/inbox/messagerules',headers=headers).status_code == 200:
+            num1+=1
+            print('19调用成功'+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/v1.0/me/outlook/masterCategories',headers=headers).status_code == 200:
+            num1+=1
+            print('20调用成功'+str(num1)+'次')
+            print('此次运行结束时间为 :', localtime)
+        if req.get(r'https://graph.microsoft.com/v1.0/me/mailFolders/Inbox/messages/delta',headers=headers).status_code == 200:
+            num1+=1
+            print("21调用成功"+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/v1.0/me/drive',headers=headers).status_code == 200:
+            num1+=1
+            print("22调用成功"+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/v1.0/drive/root',headers=headers).status_code == 200:
+            num1+=1
+            print('23调用成功'+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/v1.0/users ',headers=headers).status_code == 200:
+            num1+=1
+            print('24调用成功'+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/v1.0/me/messages',headers=headers).status_code == 200:
+            num1+=1
+            print('25调用成功'+str(num1)+'次')    
+        if req.get(r'https://graph.microsoft.com/v1.0/me/mailFolders/inbox/messageRules',headers=headers).status_code == 200:
+            num1+=1
+            print('26调用成功'+str(num1)+'次')    
+        if req.get(r'https://graph.microsoft.com/v1.0/applications?$count=true',headers=headers).status_code == 200:
+            num1+=1
+            print('27调用成功'+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/v1.0/me/drive/root/children',headers=headers).status_code == 200:
+            num1+=1
+            print('28调用成功'+str(num1)+'次')
+
+        if req.get(r'https://graph.microsoft.com/beta/me/mailFolders/inbox/messagerules',headers=headers).status_code == 200:
+            num1+=1
+            print('30调用成功'+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/v1.0/me/mailFolders/Inbox/messages/delta',headers=headers).status_code == 200:
+            num1+=1
+            print("31调用成功"+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/v1.0/me/drive',headers=headers).status_code == 200:
+            num1+=1
+            print("32调用成功"+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/v1.0/drive/root',headers=headers).status_code == 200:
+            num1+=1
+            print('33调用成功'+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/v1.0/users ',headers=headers).status_code == 200:
+            num1+=1
+            print('34调用成功'+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/v1.0/me/messages',headers=headers).status_code == 200:
+            num1+=1
+            print('35调用成功'+str(num1)+'次')    
+        if req.get(r'https://graph.microsoft.com/v1.0/me/mailFolders/inbox/messageRules',headers=headers).status_code == 200:
+            num1+=1
+            print('36调用成功'+str(num1)+'次')    
+        if req.get(r'https://graph.microsoft.com/v1.0/applications?$count=true',headers=headers).status_code == 200:
+            num1+=1
+            print('37调用成功'+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/v1.0/me/drive/root/children',headers=headers).status_code == 200:
+            num1+=1
+            print('38调用成功'+str(num1)+'次')
+    
+        if req.get(r'https://graph.microsoft.com/beta/me/mailFolders/inbox/messagerules',headers=headers).status_code == 200:
+            num1+=1
+            print('40调用成功'+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/v1.0/me/outlook/masterCategories',headers=headers).status_code == 200:
+            num1+=1
+            print('41调用成功'+str(num1)+'次')
             print('此次运行结束时间为 :', localtime)
     except:
         print("pass")
